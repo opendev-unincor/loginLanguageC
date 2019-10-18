@@ -55,9 +55,18 @@ int validacaoLoginAdmin(int a, int c){
         r = 0; //admin nao existe
         return (r);
     }
+}
 //--------------------------------------------------------------------------------------------------------------    
     
+//criar cadastro de  cliente
+void cadastroCliente(int a){
+    int b,c;
+    system("cls");
+    usuarioExiste:
+    usuario[a].codigo = a+1;
 }
+
+
 
 int main(){
     //char usuario[30];
