@@ -64,19 +64,48 @@ void cadastroCliente(int a){
     system("cls");
     usuarioExiste:
     usuario[a].codigo = a+1;
+    printf("\n\tCadastro %d", usuario[a].codigo);
+    puts("\n\n\tDigite seu login: ");
+    printf("\t");
+    scanf(" %s", cadastrarUsuario[a].usuario);
+    for ( c = 0; c < 1000;c++)
+    {
+        /* code */
+        b = validaLoginUsuario(a,c);
+        if(b==1) break;
+    }if (b==0)
+    {
+        /* code */
+        memcpy(usuario[a].usuario, cadastrarUsuario[a].usuario,50);
+        puts("\tDigite a senha: ");
+        printf("\t");
+        scanf(" %s", usuario[a].senha);
+    }else
+    {
+        if (b==1)
+        {
+            /* code */
+            printf("\nlogin existente!\n");
+            goto usuarioExiste;
+        }
+    }
+    
+    
+    
+
 }
 
 
 
 int main(){
     //char usuario[30];
-    //char senha[15];
+    char senha[15];
 
-    printf("Insira seu nome de usuario:\n");
-    scanf("%s",&usuario);
+    //printf("Insira seu nome de usuario:\n");
+    //scanf("%s",&usuario);
 
-    printf("Insira sua senha:\n");
-    scanf("%s",&senha);
+    //printf("Insira sua senha:\n");
+    //scanf("%s",&senha);
     int tentativas =0;
     if (strcmp(usuario, "rodrigo")==0)
     {
