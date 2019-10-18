@@ -89,15 +89,47 @@ void cadastroCliente(int a){
             goto usuarioExiste;
         }
     }
-    
-    
-    
+}
+
+void cadastrodAdministrador(int a){
+    int b,c;
+    system("cls");
+    adminExiste:
+    admin[a].codigo = a+1;
+    printf("\n\tCadastro %d",admin[a].codigo);
+    puts("\n\n\tDigite o login: ");
+    printf("\t");
+    scanf(" %s", cadastrarAdmin[a].usuario);
+    for ( c = 0; c < 50; c++)
+    {
+        /* code */
+        b = validacaoLoginAdmin(a,c);
+        {
+            /* code */
+            if (b==1) break;
+        }if (b==0)
+        {
+            /* code */
+            memcpy(admin[a].usuario, cadastrarAdmin[a].usuario,50);
+            puts("\tDigite a senha: ");
+            printf("\t");
+            scanf(" %s", admin[a].senha);
+        }else if (b==1)
+        {
+            /* code */
+            printf("\nLogin Existente!\n");
+            goto adminExiste;
+        } 
+    }
+}
+//--------------------------------------------------------------------------------------------------------------
+
+void logarUsuario(){
 
 }
 
 
-
-int main(){
+int main(void){
     //char usuario[30];
     char senha[15];
 
