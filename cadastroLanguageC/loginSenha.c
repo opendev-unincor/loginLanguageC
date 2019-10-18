@@ -1,3 +1,8 @@
+//License:Vou deixar o código aqui, se alguém que está iniciando como eu quiser dar uma olhada, 
+//até usar esse código, tá certo que não é o melhor que vão achar, nem o melhor jeito de fazer
+// (acho eu), mas fazendo um código assim já dá pra começar a entender um pouquinho de C xD (ou não).
+//codigo fornecido por:https://forum.imasters.com.br/topic/468071-cadastro-e-login-em-c/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
