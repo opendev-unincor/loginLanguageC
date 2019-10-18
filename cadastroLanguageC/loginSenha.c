@@ -7,10 +7,62 @@
 #include <stdlib.h>
 #include <string.h>
 //#include <conio.h>
+//-----------------------------------------------------
+#define administrador "root"
+#define senhaAdministrador "root"
+//------------------------------------------------------
+void adminLogin();
+void menuLogin();
+int validaLoginUsuario();
+//-----------------------------------------------------
+struct cadastrar{
+    char usuario[10];
+    char senha[10];
+    int codigo;
+}   
+    usuario[1000],
+    admin[50],
+    cadastrarUsuario[1000],
+    cadastrarAdmin[50];
+//------------------------------------------------------
+
+//validacao de login usuario
+int validaLoginUsuario(int a, int c){
+    int r;
+    if (strcmp(cadastrarUsuario[a].usuario,usuario[c].usuario)==0)
+    {
+        /* code */
+        r =1; //ja existe usuario;
+    }else
+    {
+        /* code */
+        r = 0; //nao existe usuario
+        return r;
+    }
+}
+//------------------------------------------------------
+
+//validacao de login administrador
+int validacaoLoginAdmin(int a, int c){
+    int r;
+    if (strcmp(cadastrarAdmin[a].usuario,admin[c].usuario)==0)
+    {
+        /* code */
+        r=1; //admin ja existe
+    }else
+    {
+        /* code */
+        r = 0; //admin nao existe
+        return (r);
+    }
+    
+
+    
+}
 
 int main(){
-    char usuario[30];
-    char senha[15];
+    //char usuario[30];
+    //char senha[15];
 
     printf("Insira seu nome de usuario:\n");
     scanf("%s",&usuario);
